@@ -1,3 +1,6 @@
+"use strict";
+
+// creazione array per contenuto lista
 let list = [
     'Pomodoro',
     'Farina',
@@ -6,22 +9,29 @@ let list = [
     'Mozzarella',
     'Olio',
     'Salame piccante',
-    'Acqua'
+    'Acqua',
+    'Sale'
     ]
 
     console.log(list)
 
-    let shopping = document.getElementById('lista')
+// recupero l'elemento ul dove successivamente andrò a stampare i dati dell'array
+    let shopping = document.getElementById('lista-spesa')
 
-    
+    // dichiaro la variabile per il ciclo for, fuori dal ciclo stesso
     let i = 0
     
-
     while (i < list.length){
         let item = list[i];
         i++;
         console.log(item)
+        //funzione append per stampare i risultati nella pagina web
+        let listItem = document.createElement('li')
+        listItem.innerText= item;
+        shopping.append(listItem)
+
     };
+
 
 
     
